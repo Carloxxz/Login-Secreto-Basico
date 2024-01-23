@@ -40,6 +40,8 @@ app.post("/check", (req, res) => {
     // userIsAuthorised ? res.sendFile(__dirname + "/public/secret.html") 
     // : res.sendFile(__dirname + "/public/index.html")
 
+    // res.redirect("/")
+
     const filePath = __dirname + "/public/" + (userIsAuthorised ? "secret" : "index") + ".html";
     res.sendFile(filePath);
 })
